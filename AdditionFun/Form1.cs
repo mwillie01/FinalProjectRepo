@@ -65,7 +65,17 @@ namespace AdditionFun
 
         private void playsound(string soundtype)
         {
-
+        string basepath = System.AppDomain.CurrentDomain.BaseDirectory;
+            if (soundtype == "Applause")
+            {
+                SoundPlayer audio = new SoundPlayer(basepath + @"\Resources\Applause.wav");
+                audio.Play();
+            }
+            else
+            {
+                SoundPlayer audio = new SoundPlayer(basepath + @"\Resources\Booing.wav");
+                audio.Play();
+            }
         }
 
         private void DecrementLives(int currentLivesLeft)
