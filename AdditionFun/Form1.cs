@@ -80,6 +80,9 @@ namespace AdditionFun
             {
                 label5.ForeColor = Color.Red;
                
+                pictureBox1.Visible = false;
+                pictureBox2.Visible = true;
+
             }
             
         }
