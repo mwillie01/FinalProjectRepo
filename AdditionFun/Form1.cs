@@ -31,7 +31,7 @@ namespace AdditionFun
         {
             string x = textBox1.Text;
 
-            int currentLivesLeft = int.Parse(label5.Text);
+            int currentLivesLeft = int.Parse(label5.Text); // display the lives remaining
             if (currentLivesLeft > 0)
             {
                 string useranswer = textBox1.Text;
@@ -52,7 +52,7 @@ namespace AdditionFun
                     {
                         playsound("booing");
                         DecrementLives(currentLivesLeft);
-                        MessageBox.Show("Your answer is incorrect:(");
+                        MessageBox.Show("Your answer is incorrect:("); // Message box is answer is incorrect
                     }
                 }
                 textBox1.Text = "";
@@ -91,7 +91,7 @@ namespace AdditionFun
                 label5.ForeColor = Color.Red; // changing the color to red when lives equals zero
                
                 pictureBox1.Visible = false;
-                pictureBox2.Visible = true;
+                pictureBox2.Visible = true; // image to appear upon incorrect answer
 
             }
             
@@ -104,7 +104,7 @@ namespace AdditionFun
 
         private void button1_MouseEnter(object sender, EventArgs e)
         {
-            Color defaultcolor = button1.BackColor;
+            Color defaultcolor = button1.BackColor; // changing color of the check answer button when mouse enters and leaves
             button1.BackColor = System.Drawing.Color.LightPink;
 
         }
