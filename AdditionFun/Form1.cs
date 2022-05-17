@@ -80,7 +80,7 @@ namespace AdditionFun
 
         private void DecrementLives(int currentLivesLeft)
         {
-            currentLivesLeft = currentLivesLeft - 1;
+            currentLivesLeft = currentLivesLeft - 1; // lives decreasing upon incorrect answer
             label5.Text = currentLivesLeft.ToString();
             if (currentLivesLeft == 1)
             {
