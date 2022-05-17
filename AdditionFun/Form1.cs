@@ -38,14 +38,14 @@ namespace AdditionFun
                 if (!IsANumber(useranswer))
                 {
                     DecrementLives(currentLivesLeft);
-                    MessageBox.Show("Your answer is incorrect:( Remember, only enter numbers!");
+                    MessageBox.Show("Your answer is incorrect:( Remember, only enter numbers!"); // Message box to appear if a non-integer is entered
                 }
                 else
                 {
                     if (double.Parse(useranswer).Equals(cal))
                     {
                         playsound("Applause");
-                        MessageBox.Show("Your answer is correct! Keep going! You're doing great!");
+                        MessageBox.Show("Your answer is correct! Keep going! You're doing great!"); // Message box if answer is correct
                         methodX();
                     }
                     else
@@ -59,7 +59,7 @@ namespace AdditionFun
             }
             else
             {
-                MessageBox.Show("You have no lives left:(");
+                MessageBox.Show("You have no lives left:("); // Message box to appear when lives reach zero
             }
         }
 
@@ -84,11 +84,11 @@ namespace AdditionFun
             label5.Text = currentLivesLeft.ToString();
             if (currentLivesLeft == 1)
             {
-                label5.ForeColor = Color.Yellow;
+                label5.ForeColor = Color.Yellow; // changing the color to yellow when lives equals one
             }
             else if (currentLivesLeft == 0)
             {
-                label5.ForeColor = Color.Red;
+                label5.ForeColor = Color.Red; // changing the color to red when lives equals zero
                
                 pictureBox1.Visible = false;
                 pictureBox2.Visible = true;
