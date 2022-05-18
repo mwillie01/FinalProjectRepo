@@ -1,0 +1,106 @@
+---
+title: "Sample Document"
+output:
+  html_document:
+    toc: true
+    theme: united
+---
+Beginning with Form1.Designer.cs we created an initialized component (button) 
+to set up customization options. We created a text box and five labels and two picture boxes.
+For button 1 the customization establishes the back color, border color, 
+the font, foreground color, location of the button, name of the button, 
+size, and mouse events (to hover the mouse and when the user clicks)
+
+For textBox1 we established the font, color, location, name, size, horzontally
+aligned the text, and a keydown event (to cause the game to listen to key presses)
+
+Label1 was created so that the game would state "You have 3 lives, so use them wisely"
+Font, forecolor, location of wording, name, size, and a click event were created to 
+place the generated sentence toward the bottom of the screen.
+
+Label2 was created to generate an exclamation "Welcome to Addition Fun!"
+and follows the same pattern as Label1.
+
+Label3 was used to display a numerical math problem using Cambria math font
+
+Label4 was used to create the statement "lives remaining"
+
+Label5 was used to create the number 3 to show on the screen.
+This label was later used to display number of lives user has remaining
+
+### Jesse Mills
+
+PictureBox2 was inserted in order to allow later coding to display a frowny face
+after three incorrect inputs
+
+pictureBox1 was inserted to display a smiley face by default until sad face appears
+
+coding for pictureBoxes was created in Form1.cs file
+this code is located in Addition Fun
+
+Form1 changes the background color, resolution, and places all picture boxes and labels
+into correct positions using previously created labels
+
+previous labels and picture boxes were cashed to place code into computer's recent memory
+to allow them to be used in later functions. For example: object of type TextBox 
+was created and named textBox1. Objects of type label were created and labeled label1, 
+label2, etc.
+
+### Madison Williams
+
+The namespace AdditionFun begins by executing the function InitializeComponent() and runs the function called
+methodX()
+
+methodX() begins by picking random numbers and storing them in rand. 
+Then it creates the integer (int) named first_value and picks a number between 100 
+and 500 to store inside of it. 
+The same is repeated for integer second value.
+Then a integer (int) named cal adds the two number together and stores this value
+Then label3 text is updated to match the first_value + second_value "= ?"
+
+Then a new label named Label() was created and named label
+
+Then a new button was creaed and named button1
+
+Then code was inserted to allow the button to function when clicked 
+This private function that returns data of type void takes in a sender and arguments
+It checks if lives left are greater than 0.
+Then it creates a string called useranswer and sets it to textBox1.Text 
+if the user answer is not a number then a messagebox will appear stating 
+"Your answer is incorrect: Remember, only enter numbers!"
+
+Next it checks if the user answer matches the calculation using 
+if (double.Parse(useranswer).Equals(cal))
+if the answer matches the calculation then a message box appears stating
+"Your answer is correct! Keep going!  You're doing great!"
+
+### Katy Boles
+Applause plays using the playsound function with the argument ("Applause"); 
+Lastly methodX is called to generate two new numbers for the next question.
+
+If the user answer does not match the calculation a booing sound is played
+using the playsound function with the argument ("booing")
+it takes away a life from the player and displays the message boxe
+"Your answer is incorrect"
+
+### Madison Williams
+
+Lastly if no lives are left a message box will display stateing ("You have no lives left:("))
+
+Then the function for DecrementLives is defined. It takes in currentLivesLeft
+It subtracts 1 from its value.
+If its value is = to 1 it sets the color to yellow.
+If the value is = to 0 it sets the color to red.
+
+private function IsANumber returns a bool by taking in the string imputstr 
+and it determines whether the input string is a number using the function
+decimal.TryParse 
+If it is a number it returns true, and false if it is not.
+
+When mouse leaves the button it returns the button to normal color using
+button1_MouseEnter to change button to background color, and button1_MouseLeave 
+returns color to original
+Lastly if a key is pressed the mouse will disappear using the function
+textBox1_KeyDown 
+
+
